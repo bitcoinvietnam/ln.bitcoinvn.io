@@ -14,8 +14,8 @@
                         BitcoinVN 22
                     </div>
                     <div class="">
-                        <span class="bg-white border-8 border-white">
-                            026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f
+                        <span class="bg-white border-8 border-white" v-clipboard:copy=nodeAddress>
+                            {{ nodeAddress }}
                         </span>
                     </div>
                 </div>
@@ -47,4 +47,11 @@
 </template>
 
 <script>
+export default {
+    data () {
+        return {
+            nodeAddress: '026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f'
+        }
+    }
+}
 </script>
