@@ -4,7 +4,8 @@
     <Header />
 
     <!-- Main welcome section -->
-    <div class="flex flex-col justify-center px-48 py-14 bg-gradient-to-r from-dark-blue via-dark-blue-2 to-dark-blue">
+    <div
+      class="flex flex-col justify-center px-5 sm:px-10 md:px-48 sm:py-8 md:py-14 bg-gradient-to-r from-dark-blue via-dark-blue-2 to-dark-blue">
       <Welcome :status="this.status" :loading="this.loading" />
 
       <!-- Some numbers of Node -->

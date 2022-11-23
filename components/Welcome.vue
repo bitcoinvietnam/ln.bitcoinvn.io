@@ -1,8 +1,8 @@
 <template>
     <div class="rounded bg-gradient-to-br from-yellow-100 to-gray-300">
         <div class="text-gray-800">
-            <div class="flex flex-col justify-start px-8 float-left">
-                <div class="font-bold text-3xl py-10">
+            <div class="flex flex-col justify-start px-8 md:float-left">
+                <div class="font-bold text-3xl py-8 md:py-10">
                     Connect to the BitcoinVN<br>Lightning Node
                 </div>
                 <div>
@@ -11,7 +11,7 @@
                     <span v-else-if="status === 1" class="font-extrabold text-yellow-500 text-2xl">Online</span>
                     <span v-else-if="status === 0" class="font-bold text-red-500 text-2xl">Offline</span>
                 </div>
-                <div class="py-10">
+                <div class="py-8 md:py-10">
                     <a href="#connect">
                         <button
                             class="hover:border hover:border-yellow-300 hover:bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-yellow-300 text-gray-800 rounded py-3 px-3">Connect
@@ -23,7 +23,7 @@
                 <div>
                 </div>
             </div>
-            <div class="flex flex-col justify-end px-10 text-right float-right py-10">
+            <div class="flex flex-col justify-end px-10 text-right md:float-right py-10">
                 <div v-for="info in mainInfo">
                     <div class="NodeDetailCaption">
                         {{ info.caption }}

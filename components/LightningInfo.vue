@@ -1,12 +1,12 @@
 <template>
-    <div class="py-10">
+    <div class="py-4 md:py-10">
         <div class="bg-white rounded-sm">
             <div v-for="info in infoList" class="even:bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
-                <div class="InfoBox">
-                    <div class="InfoTitle">
+                <div class="InfoBox px-2 py-2 flex flex-col md:px-5 md:flex-row">
+                    <div class="InfoTitle py-2 md:py-0 md:min-w-max md:float-left md:w-2/3 md:px-5">
                         {{ info.title }}
                     </div>
-                    <div class="InfoContent">
+                    <div class="InfoContent sm:text-justify md:text-left md:float-right">
                         {{ info.content }}
                     </div>
                 </div>
@@ -23,7 +23,7 @@ export default {
              {
                 title: 'What is the Lightning Network',
                 img: '',
-                content: 'The most popular cryptocurrency in the world today is, of course, the oldest one, Bitcoin. But there is still the question, "Will Bitcoin be able to handle millions of daily transactions as more people adopt the cryptocurrency?" The answer to this question might come in the form of the Lightning Network. The second layer technology for Bitcoin has the capability of boosting the number of transactions on the cryptocurrency per second while keeping the fees minuscule. The Lightning Network does this by creating a second layer on Bitcoin\'s blockchain to handle transactions independently without having them recorded on the blockchain every single time. This way, a vast amount of transactions are off-loaded from Bitcoin\'s blockchain, leaving the bandwidth with free spaces.'
+                content: 'The most popular cryptocurrency in the world today is, of course, the oldest one, Bitcoin. But there is still the question, "Will Bitcoin be able to handle millions of daily transactions as more people adopt the cryptocurrency?" The answer to this question might come in the form of the Lightning Network. The second layer technology for Bitcoin has the capability of boosting the number of transactions on the cryptocurrency per second while keeping the fees minuscule.'
              }   ,
              {
                 title: 'Benefits of Lightning Network',
@@ -47,14 +47,14 @@ export default {
 @tailwind utilities;
 
 .InfoBox {
-    @apply flex flex-row px-5 py-5;
+    @apply flex flex-row;
 }
 
 .InfoTitle {
-    @apply font-bold text-xl text-yellow-600 float-left min-w-max max-w-lg w-2/3 px-5;
+    @apply font-bold text-xl text-yellow-600 max-w-lg;
 }
 
 .InfoContent {
-    @apply max-w-md text-left float-right;
+    @apply max-w-md;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
-    <div class="bg-dark-blue text-white text-center py-14 px-48 text-gray-400">
-        <p class="float-left text-sm hover:text-white">
+    <div class="bg-dark-blue text-white text-center py-8 md:py-14 md:px-48 text-gray-400">
+        <p class="text-sm hover:text-white md:float-left ">
             © 2014 - {{ new Date().getFullYear() }} <a href="https://bitcoinvn.io" target="_blank" class="">
                 BitcoinVN
             </a>
         </p>
-        <p class="float-right">
+        <p class="md:float-right">
             <span v-for="product in products" class="text-sm mx-2 hover:text-white">
                 <a :href=product.url target="_blank">{{ product.caption }}</a>
             </span>
