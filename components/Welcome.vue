@@ -13,7 +13,8 @@
                 </div>
                 <div class="py-10">
                     <a href="#connect">
-                        <button class="hover:bg-yellow-400 bg-yellow-300 text-gray-800 rounded py-3 px-3">Connect
+                        <button
+                            class="hover:border hover:border-yellow-300 hover:bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-yellow-300 text-gray-800 rounded py-3 px-3">Connect
                             to the
                             BitcoinVN Lightning
                             Node</button>
