@@ -28,10 +28,7 @@
                     <div class="NodeDetailCaption">
                         {{ info.caption }}
                     </div>
-                    <div class="NodeDetailText" v-clipboard:copy="info.value" v-tooltip="{
-                        trigger5: ['click'],
-                        content: $parent.$data.copiedMsg
-                    }">
+                    <div class="NodeDetailText" v-clipboard:copy="info.value">
                         {{ info.value }}
                     </div>
                 </div>
