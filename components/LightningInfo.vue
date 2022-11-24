@@ -2,7 +2,7 @@
     <div class="py-4 md:py-10">
         <div class="bg-white rounded-sm">
             <div v-for="info in infoList" class="even:bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
-                <div class="InfoBox px-2 py-2 flex flex-col md:px-5 md:flex-row">
+                <div class="InfoBox px-2 py-2 flex-col md:px-5 md:flex-row">
                     <div class="InfoTitle py-2 md:py-0 md:min-w-max md:float-left md:w-2/3 md:px-5">
                         {{ info.title }}
                     </div>
@@ -47,7 +47,7 @@ export default {
 @tailwind utilities;
 
 .InfoBox {
-    @apply flex flex-row;
+    @apply flex;
 }
 
 .InfoTitle {
