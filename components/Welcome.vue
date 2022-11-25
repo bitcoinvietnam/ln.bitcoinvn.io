@@ -19,8 +19,11 @@
                             BitcoinVN Lightning
                             Node</button>
                     </a>
-                </div>
-                <div>
+                    <div class="text-xs text-center text-gray-400 pt-4 md:px-3 hover:underline hover:text-gray-700">
+                        <a href="https://twitter.com/Bitcoin_Vietnam/status/1595311782813663233" target="_blank">
+                            or check latest update on Twitter
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col justify-end px-10 text-right md:float-right py-10">
