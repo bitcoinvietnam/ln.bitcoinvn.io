@@ -8,7 +8,7 @@
                 <div>
                     Status:
                     <span v-if="loading" class="font-bold text-2xl italic">Loading...</span>
-                    <span v-else-if="status === 1" class="font-extrabold text-yellow-500 text-2xl">Online</span>
+                    <span v-else-if="status === 1" class="font-extrabold text-green-500 text-2xl">Online</span>
                     <span v-else-if="status === 0" class="font-bold text-red-500 text-2xl">Offline</span>
                 </div>
                 <div class="py-8 md:py-10">
