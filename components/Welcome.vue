@@ -1,17 +1,17 @@
 <template>
     <div class="rounded bg-gradient-to-br from-yellow-100 to-gray-300">
         <div class="text-gray-800">
-            <div class="flex flex-col justify-start px-8 md:float-left">
-                <div class="font-bold text-3xl py-8 md:py-10">
-                    Connect to the BitcoinVN<br>Lightning Node
+            <div class="flex flex-col px-8 md:float-left md:max-w-md">
+                <div class="text-left font-bold text-3xl py-8 md:py-10 break-words">
+                    Connect to the BitcoinVN Lightning Node
                 </div>
-                <div>
+                <div class="text-left ">
                     Status:
                     <span v-if="loading" class="font-bold text-2xl italic">Loading...</span>
                     <span v-else-if="status === 1" class="font-extrabold text-green-500 text-2xl">Online</span>
                     <span v-else-if="status === 0" class="font-bold text-red-500 text-2xl">Offline</span>
                 </div>
-                <div class="py-8 md:py-10">
+                <div class="text-left py-8 md:py-7">
                     <a href="#connect">
                         <button
                             class="hover:border hover:border-yellow-300 hover:bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 bg-yellow-300 text-gray-800 rounded py-3 px-3">Connect
@@ -19,11 +19,23 @@
                             BitcoinVN Lightning
                             Node</button>
                     </a>
-                    <div class="text-xs text-center text-gray-400 pt-4 md:px-3 hover:underline hover:text-gray-700">
-                        <a href="https://twitter.com/Bitcoin_Vietnam/status/1595311782813663233" target="_blank">
-                            or check latest update on Twitter
+                </div>
+                <div class="text-xs text-center text-gray-600 md:text-left md:pb-7">
+                    <span>
+                        View on
+                        <a href="
+                        https://mempool.space/lightning/node/026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f"
+                            target="_blank" class="hover:text-black">
+                            Mempool.Space
+                            <ExternalLinkLogo class="ExternalLink" />
                         </a>
-                    </div>
+                        or
+                        <a href="https://twitter.com/Bitcoin_Vietnam/status/1595311782813663233" target="_blank"
+                            class="hover:text-black">
+                            Twitter
+                            <ExternalLinkLogo class="ExternalLink" />
+                        </a>
+                    </span>
                 </div>
             </div>
             <div class="flex flex-col justify-end px-10 text-right md:float-right py-10">
@@ -35,14 +47,18 @@
                         {{ info.value }}
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import ExternalLinkLogo from '~/assets/external-link.svg'
+
 export default {
+    components: {
+        ExternalLinkLogo
+    },
     props: {
         status: Number,
         loading: Boolean
@@ -72,6 +88,10 @@ export default {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ExternalLink {
+    @apply inline w-3 h-3;
+}
 
 .NodeDetailCaption {
     @apply py-2 font-bold;
