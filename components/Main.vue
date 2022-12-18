@@ -9,7 +9,7 @@
       <Welcome :status="this.status" :loading="this.loading" />
 
       <!-- Some numbers of Node -->
-      <NodeNumber :loading="this.loading" :channels="this.channels" :capacity="this.capacity" />
+      <NodeNumber :loading="this.loading" :channels="this.channels" :capacity="this.capacity" :avgOutgoing="this.avgOutgoing" :avgIncoming="this.avgIncoming" />
 
       <!-- Information about Lightning Network -->
       <LightningInfo />
@@ -65,9 +65,9 @@ export default {
 
     // Get stats from Amboss.Space, via BVN General Crawler
     const ambossStats = await fetch('https://bvn-general-crawler.fly.dev/bitcoinvn_22').then(res => res.json())
-    const result = ambossStats.result // { outgoing, incoming }
-    this.avgOutgoing = result.outgoing
-    this.avgIncoming = result.incoming
+    const result = ambossStats.result // { avgOutgoingSats, avgIncomingSats }
+    this.avgOutgoing = result.avgOutgoingSats
+    this.avgIncoming = result.avgIncomingSats
 
     this.loading = false
   }
