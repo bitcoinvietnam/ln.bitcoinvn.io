@@ -1,20 +1,20 @@
 <template>
-    <div id="connect" class="flex sm:flex-row md:flex-col bg-yellow-300 text-gray-800">
+    <div id="connect" class="flex text-gray-800 bg-yellow-300 sm:flex-row md:flex-col">
         <div class="px-8 py-4 md:py-20 md:px-48">
             <div class="md:float-left">
                 <div class="flex flex-col">
-                    <div class="font-bold text-2xl md:text-4xl">
+                    <div class="text-2xl font-bold md:text-4xl">
                         Connect to the BitcoinVN<br>Lightning Node
                     </div>
                     <div class="py-4 md:py-6 md:font-bold text-md md:text-lg">
                         Do You Have a Lightning Node of Your Own?<br>
                         Connect With Ours.
                     </div>
-                    <div class="font-bold py-2 md:py-5">
+                    <div class="py-2 font-bold md:py-5">
                         BitcoinVN 22
                     </div>
                     <div class="">
-                        <span class="sm:py-4 md:py-0 bg-white md:border-8 border-white break-all"
+                        <span class="break-all bg-white border-white sm:py-4 md:py-0 md:border-8"
                             v-clipboard:copy=nodeAddress>
                             {{ nodeAddress }}
                         </span>
@@ -49,10 +49,10 @@
 
 <script>
 export default {
-    data () {
-        return {
-            nodeAddress: '026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f'
-        }
+  data () {
+    return {
+      nodeAddress: '026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f'
     }
+  }
 }
 </script>
