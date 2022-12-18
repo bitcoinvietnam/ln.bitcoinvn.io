@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home" class="font-sans">
     <!-- Header -->
     <Header />
 
@@ -24,43 +24,52 @@
 </template>
 
 <script>
-import Vue from "vue";
+import Vue from 'vue'
 import VueClipboard from 'vue-clipboard2'
 import VTooltip from 'v-tooltip'
 
 Vue.use(VTooltip)
 Vue.use(VueClipboard)
-var numeral = require("numeral");
-Vue.filter("formatNumber", function (value) {
-  return numeral(value).format("0,0"); // Example 2,912,543,109
-});
+const numeral = require('numeral')
+Vue.filter('formatNumber', function (value) {
+  return numeral(value).format('0,0') // Example 2,912,543,109
+})
 
 export default {
-  data() {
+  data () {
     return {
       loading: false,
       status: null,
       channels: null,
       capacity: null,
-      copiedMsg: 'Copied',
+      avgOutgoing: null,
+      avgIncoming: null,
+      copiedMsg: 'Copied'
     }
   },
-  activated() {
-      // Call fetch again if last fetch more than 30 sec ago
-      if (this.$fetchState.timestamp <= Date.now() - 30000) {
-        this.$fetch()
-      }
-    },
-    async fetch() {
-      this.loading = true
-      let resp = await fetch('https://mempool.space/api/v1/lightning/search?searchText=BitcoinVN').then(res => res.json())
-      let node = resp.nodes[0] // Node BitcoinVN 22
-      this.capacity = node.capacity
-      this.channels = node.channels
-      this.status = node.status
-      this.loading = false
-    },
-  methods: {
+  activated () {
+    // Call fetch again if last fetch more than 30 sec ago
+    if (this.$fetchState.timestamp <= Date.now() - 30000) {
+      this.$fetch()
+    }
+  },
+  async fetch () {
+    this.loading = true
+
+    // Get stats from Mempool.Space
+    const mempoolStats = await fetch('https://mempool.space/api/v1/lightning/search?searchText=BitcoinVN').then(res => res.json())
+    const node = mempoolStats.nodes[0] // Node BitcoinVN 22
+    this.capacity = node.capacity
+    this.channels = node.channels
+    this.status = node.status
+
+    // Get stats from Amboss.Space, via BVN General Crawler
+    const ambossStats = await fetch('https://bvn-general-crawler.fly.dev/bitcoinvn_22').then(res => res.json())
+    const result = ambossStats.result // { outgoing, incoming }
+    this.avgOutgoing = result.outgoing
+    this.avgIncoming = result.incoming
+
+    this.loading = false
   }
 }
 </script>

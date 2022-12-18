@@ -1,12 +1,12 @@
 <template>
     <div class="py-8 md:py-14">
-        <div class="bg-yellow-300 text-gray-800 py-4 md:py-10">
-            <div class="flex flex-col md:flex-row justify-center">
-                <div v-for="number in nodeNumbers">
-                    <div class="NumberBox px-0 sm:px-8 py-4 md:py-0">
+        <div class="py-4 text-gray-800 bg-yellow-300 md:py-10">
+            <div class="flex flex-col justify-center md:flex-row">
+                <div v-for="number in nodeNumbers" :key="number.caption">
+                    <div class="px-0 py-4 NumberBox sm:px-8 md:py-0">
                         <div v-if="loading" class="LoadingNumberBox">Loading...</div>
                         <div v-else class="Number">
-                            {{ number.value | formatNumber }}
+                            {{ number.value | formatNumber  }}
                         </div>
                         <div class="Caption">
                             {{ number.caption }}
@@ -20,37 +20,38 @@
 
 <script>
 export default {
-    props: {
-        loading: Boolean,
-        channels: Number,
-        capacity: Number
-    },
-    data () {
-      return {
-        nodeNumbers: [
-            {
-                caption: 'Number of Channels',
-                value: this.$props.channels
-            },
-            {
-                caption: 'Capacity',
-                value: this.capacity
-            },
-            {
-                caption: 'Some Index',
-                value: 0
-            },
-            {
-                caption: 'Some Index',
-                value: 0
-            },
-        ]
+  props: {
+    loading: Boolean,
+    channels: Number,
+    capacity: Number,
+    avgOutgoing: Number,
+    avgIncoming: Number
+  },
+  data () {
+    return {
+      nodeNumbers: [
+        {
+          caption: 'Number of Channels',
+          value: this.channels
+        },
+        {
+          caption: 'Capacity',
+          value: this.capacity
+        },
+        {
+          caption: 'Average Outgoing',
+          value: this.avgOutgoing
+        },
+        {
+          caption: 'Average Incoming',
+          value: this.avgIncoming
+        }
+      ]
     }
-}
+  }
 }
 </script>
 
-  
 <style>
 @tailwind base;
 @tailwind components;
@@ -63,8 +64,6 @@ export default {
 .Number {
     @apply text-2xl font-bold
 }
-
-.Caption {}
 
 .LoadingNumberBox {
     @apply flex flex-col text-center px-5 italic;

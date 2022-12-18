@@ -23,18 +23,18 @@ export default {
              {
                 title: 'What is the Lightning Network',
                 img: '',
-                content: 'The most popular cryptocurrency in the world today is, of course, the oldest one, Bitcoin. But there is still the question, "Will Bitcoin be able to handle millions of daily transactions as more people adopt the cryptocurrency?" The answer to this question might come in the form of the Lightning Network. The second layer technology for Bitcoin has the capability of boosting the number of transactions on the cryptocurrency per second while keeping the fees minuscule.'
+                content: 'The most popular cryptocurrency in the world today is, of course, the oldest one, Bitcoin. But there is still the question, "Will Bitcoin be able to handle millions of daily transactions as more people adopt the cryptocurrency?" The answer to this question might come in the form of the Lightning Network. The second layer technology for Bitcoin has the capability of boosting the number of transactions on the cryptocurrency per second while keeping the fees minuscule. For more information you can read a primer on the advantages of the Lightning Network on BitcoinVN News [hyperlink: https://news.bitcoinvn.io/lightning-networks-advantages-as-payment-technology/ '
              }   ,
              {
-                title: 'Benefits of Lightning Network',
-                img: '',
-                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-             }   ,
-             {
-                title: 'How It Works',
-                img: '',
-                content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-             }   
+                 title: 'How It Works',
+                 img: '',
+                 content: 'The Bitcoin Blockchain is on purpose relatively low throughput in order to avoid centralization pressures compromising the security of the network. As such it is not very useful as a payments network. Furthermore the audibility of the Bitcoin blockchain reveals and broadcasts any single transaction to the whole world. While this guarantees for no hidden monetary inflation, the Bitcoin Blockchain is not a very privacy-preserving tool for value transfers. The Lightning Network remedies these issues in part by Storing payment information only with the peers in the Lightning Network (the Bitcoin blockchain serves solely as settlement layer) Keeping payment information private between the connected peers in the Lightning Network (no public visibility) The Lightning Network therefore circumvents the issue that otherwise every single payment would be stored on the Bitcoin Blockchain (requiring huge bandwidth and storage), while avoiding to announce such payments to the whole world. The TL, DR: The Lightning Network enhances the scalability and privacy of the Bitcoin Network while keeping the Bitcoin base layer unchanged.'
+                }   ,
+                {
+                   title: 'Benefits of Lightning Network',
+                   img: '',
+                   content: 'Lightining Transactions settle generally within a few seconds maximum. You can see an example transaction in practice here [hyperlink: https://odysee.com/@FreedomVideos_and_more:2/tacos-in-vietnam-lightning-neutronpay:c] You can also fund any Vietnamese [hyperlink: https://bitcoinvn.io/?deposit=btcln&settle=vnd] or Russian bank account [hyperlink: https://bitcoinvn.io/?deposit=btcln&settle=rubbankcard] via the services of BitcoinVN. Thats for the two boxes (and maybe make that line here in bold: "The TL, DR: The Lightning Network enhances the scalibity and privacy of the Bitcoin Network while keeping the Bitcoin base layer unchanged.'
+                }   
             ]
         }
     }
