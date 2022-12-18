@@ -1,15 +1,15 @@
 <template>
-    <div class="bg-dark-blue text-white text-center py-8 md:py-14 md:px-48 text-gray-400">
+    <div class="py-8 text-center text-white text-gray-400 bg-dark-blue md:py-14 md:px-48">
         <p class="text-sm hover:text-white md:float-left ">
             © 2014 - {{ new Date().getFullYear() }} <a href="https://bitcoinvn.io" target="_blank" class="">
                 BitcoinVN
             </a>
         </p>
         <p class="md:float-right">
-            <span v-for="product in products" class="text-sm mx-2 hover:text-white">
-                <a :href=product.url target="_blank">{{ product.caption }}</a>
+            <span v-for="branch in branches" class="mx-2 text-sm hover:text-white" :key="branch.name">
+                <a :href=branch.url target="_blank">{{ branch.name }}</a>
             </span>
-            <!-- 
+            <!--
                 <span v-for="social in socials" class="text-sm">
                     <a :href=social.url><img :src=social.img width="20" height="20" class="fill-gray-300" /></a>
                 </span>
@@ -20,57 +20,61 @@
 
 <script>
 export default {
-    data() {
-        return {
-            products: [
-                {
-                    caption: 'News',
-                    url: 'https://news.bitcoinvn.io/'
-                            },
-                {
-                    caption: 'Shop',
-                    url: 'https://shop.bitcoinvn.io/'
-                },
-                {
-                    caption: 'OTC',
-                    url: 'https://otc.bitcoinvn.io/'
-                },
-                {
-                    caption: 'BTM',
-                    url: 'https://btm.bitcoinvn.io/'
-                },
-                {
-                    caption: 'Brand',
-                    url: 'https://bitcoinvietnam.zendesk.com/hc/en-us/articles/8861460486937-BitcoinVN-Brand'
-                }
-            ],
-            socials: [{
-                caption: 'Telegram',
-                url: 'https://t.me/bitcoinvn_community',
-               
-            },
-            {
-                caption: 'Facebook',
-                url: 'https://www.facebook.com/www.bitcoinvn.io',
-                img: '~/assets/facebook.svg'
-            },
-            {
-                caption: 'Twitter',
-                url: 'https://twitter.com/Bitcoin_Vietnam'
-            },
-            {
-                caption:'LinkedIn',
-                url:'https://www.linkedin.com/company/bitcoin-vietnam'
-            },
-            {
-                caption:'Gab',
-                url:'https://gab.com/bitcoin_vietnam'
-            },{
-                caption: 'Odysee',
-                url: 'https://odysee.com/@BitcoinVN:0'
-            }
-        ]
+  data () {
+    return {
+      branches: [
+        {
+          name: 'Status',
+          url: 'https://status.bitcoinvn.io/'
+        },
+        {
+          name: 'News',
+          url: 'https://news.bitcoinvn.io/'
+        },
+        {
+          name: 'Shop',
+          url: 'https://shop.bitcoinvn.io/'
+        },
+        {
+          name: 'OTC',
+          url: 'https://otc.bitcoinvn.io/'
+        },
+        {
+          name: 'BTM',
+          url: 'https://btm.bitcoinvn.io/'
+        },
+        {
+          name: 'Brand',
+          url: 'https://bitcoinvietnam.zendesk.com/hc/en-us/articles/8861460486937-BitcoinVN-Brand'
         }
+      ],
+      socials: [{
+        name: 'Telegram',
+        url: 'https://t.me/bitcoinvn_community'
+
+      },
+      {
+        name: 'Facebook',
+        url: 'https://www.facebook.com/www.bitcoinvn.io',
+        img: '~/assets/facebook.svg'
+      },
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/Bitcoin_Vietnam'
+      },
+      {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/company/bitcoin-vietnam'
+      },
+      {
+        name: 'Gab',
+        url: 'https://gab.com/bitcoin_vietnam'
+      }, {
+        name: 'Odysee',
+        url: 'https://odysee.com/@BitcoinVN:0'
+      }
+      ]
     }
+  }
 }
 </script>
