@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="font-sans">
+  <div id="home" class="font-sans-serif">
     <!-- Header -->
     <Header />
 
