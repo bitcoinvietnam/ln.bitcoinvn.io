@@ -35,7 +35,7 @@
                     <div class="InfoText">
                       <p>The Lightning Network enhances the scalability and privacy of the Bitcoin Network while keeping the Bitcoin base layer unchanged.</p>
                       <p>
-                        Lightning Transactions settle generally within a few seconds maximum. You can see an example transaction in practice <a class="external-link" target="_blank" href="https://odysee.com/@FreedomVideos_and_more:2/tacos-in-vietnam-lightning-neutronpay:c">here</a>. You can also fund any <a class="external-link" target="_blank" href="https://bitcoinvn.io/?deposit=btcln&settle=vnd">Vietnamese</a> or <a class="external-link" target="_blank" href="https://bitcoinvn.io/?deposit=btcln&settle=rubbankcard">Russian</a> bank account via the services of <a class="external-link" target="_blank" href="https://bitcoinvn.io/">BitcoinVN</a>.
+                        Lightning Transactions settle generally within a few seconds maximum. You can see an example transaction in practice <a class="external-link" target="_blank" href="https://odysee.com/@FreedomVideos_and_more:2/tacos-in-vietnam-lightning-neutronpay:c">here</a>. You can also fund any <a class="external-link" target="_blank" href="https://bitcoinvn.io/?deposit=btcln&settle=vnd">Vietnamese</a> bank account via the services of <a class="external-link" target="_blank" href="https://bitcoinvn.io/">BitcoinVN</a>.
                       </p>
                       </div>
                     </div>
