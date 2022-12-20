@@ -5,18 +5,24 @@
 
     <!-- Main welcome section -->
     <div
-      class="flex flex-col justify-center px-5 sm:px-10 md:px-48 sm:py-8 md:py-14 bg-gradient-to-r from-dark-blue via-dark-blue-2 to-dark-blue">
-      <Welcome :status="this.status" :loading="this.loading" />
+      class="flex flex-col justify-center px-5 py-8 md:px-48 md:py-10 bg-gradient-to-r from-dark-blue via-dark-blue-2 to-dark-blue">
+      <Welcome :status="this.status" :loading="this.mempoolLoading" />
 
       <!-- Some numbers of Node -->
-      <NodeNumber :loading="this.loading" :channels="this.channels" :capacity="this.capacity" :avgOutgoing="this.avgOutgoing" :avgIncoming="this.avgIncoming" />
+     <div id="stats">
+       <NodeNumber :mempoolLoading="this.mempoolLoading" :ambossLoading="this.ambossLoading" :channels="this.channels" :capacity="this.capacity" :avgOutgoing="this.avgOutgoing" :avgIncoming="this.avgIncoming" />
+      </div>
 
       <!-- Information about Lightning Network -->
-      <LightningInfo />
+      <div id="info">
+        <LightningInfo />
+      </div>
 
     </div>
     <!-- Call-To-Action Connect Node -->
-    <ConnectNode />
+    <div id="connect">
+      <ConnectNode />
+    </div>
 
     <!-- Footer -->
     <Footer />
@@ -38,7 +44,8 @@ Vue.filter('formatNumber', function (value) {
 export default {
   data () {
     return {
-      loading: false,
+      mempoolLoading: false,
+      ambossLoading: false,
       status: null,
       channels: null,
       capacity: null,
@@ -48,28 +55,36 @@ export default {
     }
   },
   activated () {
-    // Call fetch again if last fetch more than 30 sec ago
-    if (this.$fetchState.timestamp <= Date.now() - 30000) {
+    // Call fetch again if last fetch more than 5 mins ago
+    if (this.$fetchState.timestamp <= Date.now() - 5 * 60000) {
       this.$fetch()
     }
   },
   async fetch () {
-    this.loading = true
+    try {
+      this.mempoolLoading = true
+      this.ambossLoading = true
 
-    // Get stats from Mempool.Space
-    const mempoolStats = await fetch('https://mempool.space/api/v1/lightning/search?searchText=BitcoinVN').then(res => res.json())
-    const node = mempoolStats.nodes[0] // Node BitcoinVN 22
-    this.capacity = node.capacity
-    this.channels = node.channels
-    this.status = node.status
+      // Get stats from Mempool.Space
+      const mempoolStats = await fetch('https://mempool.space/api/v1/lightning/search?searchText=BitcoinVN').then(res => res.json())
+      const node = mempoolStats.nodes[0] // Node BitcoinVN 22
+      this.capacity = node.capacity
+      this.channels = node.channels
+      this.status = node.status
+      // Finish loading data from Mempool
+      this.mempoolLoading = false
 
-    // Get stats from Amboss.Space, via BVN General Crawler
-    const ambossStats = await fetch('https://bvn-general-crawler.fly.dev/bitcoinvn_22').then(res => res.json())
-    const result = ambossStats.result // { avgOutgoingSats, avgIncomingSats }
-    this.avgOutgoing = result.avgOutgoingSats
-    this.avgIncoming = result.avgIncomingSats
-
-    this.loading = false
+      // Get stats from Amboss.Space, via BVN General Crawler
+      const ambossStats = await fetch('https://bvn-general-crawler.fly.dev/bitcoinvn_22').then(res => res.json())
+      const result = ambossStats.result // { avgOutgoingSats, avgIncomingSats }
+      this.avgOutgoing = result.avgOutgoingSats
+      this.avgIncoming = result.avgIncomingSats
+      // Finish loading data from Amboss
+      this.ambossLoading = false
+    } catch (err) {
+      this.mempoolLoading = false
+      this.ambossLoading = false
+    }
   }
 }
 </script>
