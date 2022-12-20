@@ -1,9 +1,7 @@
 <template>
     <div class="py-8 text-center text-white text-gray-400 bg-dark-blue md:py-14 md:px-48">
         <p class="text-sm hover:text-white md:float-left ">
-          <a href="https://bitcoinvn.io" target="_blank" class="">© 2014 - {{ new Date().getFullYear() }}
-                BitcoinVN
-            </a>
+        © 2014 - {{ new Date().getFullYear() }} BitcoinVN
         </p>
         <p class="md:float-right">
             <span v-for="branch in branches" class="mx-2 text-sm hover:text-white" :key="branch.name">
@@ -24,8 +22,8 @@ export default {
     return {
       branches: [
         {
-          name: 'Status',
-          url: 'https://status.bitcoinvn.io/'
+          name: 'Exchange',
+          url: 'https://bitcoinvn.io/'
         },
         {
           name: 'News',
@@ -42,6 +40,10 @@ export default {
         {
           name: 'BTM',
           url: 'https://btm.bitcoinvn.io/'
+        },
+        {
+          name: 'Status',
+          url: 'https://status.bitcoinvn.io/'
         },
         {
           name: 'Newsletter',
