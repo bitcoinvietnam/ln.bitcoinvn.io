@@ -9,7 +9,36 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    p {
+        @apply py-1;
+    }
+}
 
-@layer components {}
+@layer components {
+    .external-link {
+        @apply font-bold text-yellow-500;
+    }
 
-@media screen(md) {}
+    .InfoBox {
+        @apply flex flex-col py-2;
+    }
+
+    .InfoTitle {
+        @apply py-4 text-4xl;
+    }
+
+    .InfoText {
+        @apply leading-normal text-justify;
+    }
+}
+
+@media screen(md) {
+    .InfoTitle {
+        @apply text-3xl font-bold;
+    }
+
+    .InfoBox {
+        @apply flex-row px-8;
+    }
+}

@@ -1,7 +1,7 @@
 <template>
-    <div class="rounded bg-gradient-to-br from-yellow-100 to-gray-300">
+    <div class="rounded-lg bg-gradient-to-br from-yellow-100 to-gray-100/90">
         <div class="text-gray-800">
-            <div class="flex flex-col px-8 md:float-left md:max-w-md">
+            <div class="flex flex-col px-8 text-center md:float-left md:max-w-md">
                 <div class="py-8 text-3xl font-bold text-left break-words md:py-10">
                     Connect to the BitcoinVN Lightning Node
                 </div>
@@ -11,14 +11,11 @@
                     <span v-else-if="status === 1" class="text-2xl font-extrabold text-green-500">Online</span>
                     <span v-else-if="status === 0" class="text-2xl font-bold text-red-500">Offline</span>
                 </div>
-                <div class="py-8 text-left md:py-7">
-                    <a href="#connect">
+                <div class="py-8 text-center md:text-left md:py-7">
+                    <NuxtLink to="#connect">
                         <button
-                            class="px-3 py-3 text-gray-800 bg-yellow-300 rounded hover:border hover:border-yellow-300 hover:bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300">Connect
-                            to the
-                            BitcoinVN Lightning
-                            Node</button>
-                    </a>
+                        class="w-48 px-3 py-3 font-bold text-gray-800 uppercase bg-yellow-300 border rounded-lg min-w-fit hover:border-yellow-300 hover:bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300">Connect Node</button>
+                                </NuxtLink>
                 </div>
                 <div class="text-xs text-center text-gray-600 md:text-left md:pb-7">
                     <span>
@@ -43,7 +40,7 @@
                     <div class="NodeDetailCaption">
                         {{ info.caption }}
                     </div>
-                    <div class="NodeDetailText" v-clipboard:copy="info.value">
+                    <div class="NodeDetailText" >
                         {{ info.value }}
                     </div>
                 </div>
@@ -54,7 +51,6 @@
 
 <script>
 import ExternalLinkLogo from '~/assets/external-link.svg'
-
 export default {
   components: {
     ExternalLinkLogo
@@ -98,6 +94,6 @@ export default {
 }
 
 .NodeDetailText {
-    @apply py-2 text-yellow-600 break-all max-w-lg text-sm;
+    @apply py-2 text-yellow-500 break-all max-w-lg text-sm font-bold;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="py-8 text-center text-white text-gray-400 bg-dark-blue md:py-14 md:px-48">
         <p class="text-sm hover:text-white md:float-left ">
-            © 2014 - {{ new Date().getFullYear() }} <a href="https://bitcoinvn.io" target="_blank" class="">
+          <a href="https://bitcoinvn.io" target="_blank" class="">© 2014 - {{ new Date().getFullYear() }}
                 BitcoinVN
             </a>
         </p>
@@ -44,8 +44,8 @@ export default {
           url: 'https://btm.bitcoinvn.io/'
         },
         {
-          name: 'Brand',
-          url: 'https://bitcoinvietnam.zendesk.com/hc/en-us/articles/8861460486937-BitcoinVN-Brand'
+          name: 'Newsletter',
+          url: 'https://newsletter.bitcoinvn.io/'
         }
       ],
       socials: [{

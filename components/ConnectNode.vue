@@ -1,5 +1,5 @@
 <template>
-    <div id="connect" class="flex text-gray-800 bg-yellow-300 sm:flex-row md:flex-col">
+    <div class="flex text-gray-800 bg-yellow-300 sm:flex-row md:flex-col">
         <div class="px-8 py-4 md:py-20 md:px-48">
             <div class="md:float-left">
                 <div class="flex flex-col">
