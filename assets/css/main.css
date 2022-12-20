@@ -25,7 +25,7 @@ body {
     }
 
     .InfoTitle {
-        @apply py-4 text-4xl;
+        @apply py-4 text-2xl font-bold;
     }
 
     .InfoText {
@@ -35,7 +35,7 @@ body {
 
 @media screen(md) {
     .InfoTitle {
-        @apply text-3xl font-bold;
+        @apply text-3xl;
     }
 
     .InfoBox {
