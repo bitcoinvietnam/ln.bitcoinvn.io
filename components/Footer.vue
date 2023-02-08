@@ -1,24 +1,24 @@
 <template>
-    <div class="py-8 text-center text-white text-gray-400 bg-dark-blue md:py-14 md:px-48">
-        <p class="text-sm hover:text-white md:float-left ">
-        © 2014 - {{ new Date().getFullYear() }} BitcoinVN
-        </p>
-        <p class="md:float-right">
-            <span v-for="branch in branches" class="mx-2 text-sm hover:text-white" :key="branch.name">
-                <a :href=branch.url target="_blank">{{ branch.name }}</a>
-            </span>
-            <!--
+  <div class="py-8 text-center text-white text-gray-400 bg-dark-blue md:py-14 md:px-48">
+    <p class="text-sm hover:text-white md:float-left ">
+      © 2014 - {{ new Date().getFullYear() }} BitcoinVN
+    </p>
+    <p class="md:float-right">
+      <span v-for=" branch  in branches" class="mx-2 text-sm hover:text-white" :key="branch.name">
+        <a :href=branch.url target="_blank">{{ branch.name }}</a>
+      </span>
+      <!--
                 <span v-for="social in socials" class="text-sm">
                     <a :href=social.url><img :src=social.img width="20" height="20" class="fill-gray-300" /></a>
                 </span>
             -->
-        </p>
-    </div>
+    </p>
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       branches: [
         {
