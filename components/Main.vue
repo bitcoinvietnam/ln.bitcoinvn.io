@@ -9,8 +9,12 @@
       <Welcome :status="this.status" :loading="this.mempoolLoading" />
 
       <!-- Some numbers of Node -->
-     <div id="stats">
-       <NodeNumber :mempoolLoading="this.mempoolLoading" :ambossLoading="this.ambossLoading" :channels="this.channels" :capacity="this.capacity" :avgOutgoing="this.avgOutgoing" :avgIncoming="this.avgIncoming" />
+      <div id="stats">
+        <client-only>
+          <NodeNumber :mempoolLoading="this.mempoolLoading" :ambossLoading="this.ambossLoading"
+            :channels="this.channels" :capacity="this.capacity" :avgOutgoing="this.avgOutgoing"
+            :avgIncoming="this.avgIncoming" />
+        </client-only>
       </div>
 
       <!-- Information about Lightning Network -->
@@ -42,7 +46,7 @@ Vue.filter('formatNumber', function (value) {
 })
 
 export default {
-  data () {
+  data() {
     return {
       mempoolLoading: false,
       ambossLoading: false,
@@ -54,13 +58,13 @@ export default {
       copiedMsg: 'Copied'
     }
   },
-  activated () {
+  activated() {
     // Call fetch again if last fetch more than 5 mins ago
     if (this.$fetchState.timestamp <= Date.now() - 5 * 60000) {
       this.$fetch()
     }
   },
-  async fetch () {
+  async fetch() {
     try {
       this.mempoolLoading = true
       this.ambossLoading = true
