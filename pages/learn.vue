@@ -11,9 +11,11 @@
         </div>
         <div class="InfoText">
           <p>
-            <span class="text-lg font-bold">Lightning Report 2022</span> - DiamondHands - Vietnamese version translated
+            <span class="text-lg font-bold">Lightning Report 2022</span> - <a class="external-link" target="_blank"
+              href="https://www.diamondhandsnode.com/">DiamondHands</a> - Vietnamese version translated
             by Team
-            BitcoinVN News.
+            <a class="external-link" target="_blank"
+              href="https://news.bitcoinvn.io/">BitcoinVN News</a>.
           </p>
           <p>
             Download: <a class="external-link" target="_blank"
