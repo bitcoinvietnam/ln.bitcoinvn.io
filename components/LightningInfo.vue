@@ -14,27 +14,27 @@
             <p>
               The answer to this question might come in the form of the Lightning Network. The second layer technology
               for Bitcoin has the capability of boosting the number of transactions on the cryptocurrency per second
-              while keeping the fees minuscule. For more information you can read a primer on the <a
-                class="external-link" target="_blank"
-                href="https://news.bitcoinvn.io/lightning-networks-advantages-as-payment-technology/"> advantages of the
+              while keeping the fees minuscule. For more information you can read a primer on the <a class="external-link"
+                target="_blank" href="https://news.bitcoinvn.io/lightning-networks-advantages-as-payment-technology/">
+                advantages of the
                 Lightning Network on BitcoinVN News</a>.
             </p>
           </div>
         </div>
         <!--
 
-                        <div>
-                          Some Image
-                        </div>
-                      -->
+                                            <div>
+                                              Some Image
+                                            </div>
+                                          -->
       </div>
       <div class="InfoBox">
         <!--
 
-                    <div class="w-1/2">
-                      Some image
-                    </div>
-                  -->
+                                        <div class="w-1/2">
+                                          Some image
+                                        </div>
+                                      -->
         <div class="">
           <div class="InfoTitle">
             Benefits of Lightning Network
@@ -84,6 +84,18 @@
           </div>
         </div>
       </div>
+      <div class="py-5 space-y-4 text-center">
+        <div class="font-bold">
+          Looking for more in-depth resources? Take a look at our Lightning Knowledge base.
+        </div>
+        <div>
+          <NuxtLink to="/learn">
+            <button
+              class="w-48 px-3 py-3 font-bold text-gray-800 uppercase bg-yellow-300 border rounded-lg min-w-fit hover:border-yellow-300 hover:bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300">Learn
+              More</button>
+          </NuxtLink>
+        </div>
+      </div>
     </div>
-  </div>
+</div>
 </template>
