@@ -26,6 +26,8 @@ concurrency:
 jobs:
   # Build job
   build:
+    env: 
+      GTAG: ${{ env.GTAG }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
