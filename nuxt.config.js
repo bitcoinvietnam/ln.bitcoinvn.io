@@ -1,10 +1,6 @@
 export default {
   env: {
-    GTAG: process.env.GTAG
-  },
-
-  publicRuntimeConfig: {
-    GTAG: process.env.GTAG
+    GTAG: process.env.GTAG || 'UA-48621241-1'
   },
 
   // Target: https://go.nuxtjs.dev/config-target
