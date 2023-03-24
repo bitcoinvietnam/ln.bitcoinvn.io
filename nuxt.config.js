@@ -3,7 +3,7 @@ export default {
     GTAG: process.env.GTAG
   },
 
-  privateRuntimeConfig: {
+  publicRuntimeConfig: {
     GTAG: process.env.GTAG
   },
 
