@@ -12,6 +12,7 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
+    __dangerouslyDisableSanitizers: ['script'],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,6 +21,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
+    ],
+    script: [
+      { src: 'https://www.googletagmanager.com/gtag/js?id=G-G9RG2EHCEH', async: true },
+      { innerHTML: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-G9RG2EHCEH');", type: 'text/javascript', charset: 'utf-8' }
     ]
   },
 
@@ -30,7 +35,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vue-gtag' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
