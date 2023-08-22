@@ -32,7 +32,7 @@ export default {
     avgOutgoing: Number,
     avgIncoming: Number,
     avgChannelSize: Number,
-    avgFeeRate: Number
+    weightedAvgFeeRate: Number
   },
   data() {
     return {
@@ -57,7 +57,7 @@ export default {
         },
         {
           caption: 'Average Fee Rate',
-          value: this.avgFeeRate,
+          value: this.weightedAvgFeeRate,
           unit: 'sats ppm',
           source: 'amboss'
         }
