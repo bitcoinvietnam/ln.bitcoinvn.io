@@ -15,13 +15,32 @@
               href="https://www.diamondhandsnode.com/">DiamondHands</a> - Vietnamese version translated
             by Team
             <a class="external-link" target="_blank"
-              href="https://news.bitcoinvn.io/">BitcoinVN News</a>.
+              href="https://news.bitcoinvn.io/?utm_source=ln&utm_medium=author_link&utm_campaign=learn_page">BitcoinVN
+              News</a>.
           </p>
           <p>
             Download: <a class="external-link" target="_blank"
-              href="https://news.bitcoinvn.io/wp-content/uploads/2023/02/Lightning_Network_Report_EN_2022.pdf">English
+              href="https://bitcoinvn.io/news/wp-content/uploads/2023/02/Lightning_Network_Report_EN_2022.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">English
               version</a>/ <a class="external-link" target="_blank"
-              href="https://news.bitcoinvn.io/wp-content/uploads/2023/02/Lightning_Network_Report_VI_2022.pdf">Vietnamese
+              href="https://bitcoinvn.io/news/wp-content/uploads/2023/02/Lightning_Network_Report_VI_2022.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">Vietnamese
+              version</a>
+          </p>
+        </div>
+        <div class="InfoText">
+          <p>
+            <span class="text-lg font-bold">Emergence of
+              Token Layers on Bitcoin</span> - <a class="external-link" target="_blank"
+              href="https://www.diamondhandsnode.com/">DiamondHands</a> - Vietnamese version translated
+            by Team
+            <a class="external-link" target="_blank"
+              href="https://news.bitcoinvn.io/?utm_source=ln&utm_medium=author_link&utm_campaign=learn_page">BitcoinVN
+              News</a>.
+          </p>
+          <p>
+            Download: <a class="external-link" target="_blank"
+              href="https://bitcoinvn.io/news/wp-content/uploads/2023/08/Final_EN_20230205_Tokens_on_Bitcoin.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">English
+              version</a>/ <a class="external-link" target="_blank"
+              href="https://bitcoinvn.io/news/wp-content/uploads/2023/08/Final_VI_20230828_Tokens_on_Bitcoin.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">Vietnamese
               version</a>
           </p>
         </div>
