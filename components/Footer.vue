@@ -23,31 +23,31 @@ export default {
       branches: [
         {
           name: 'Exchange',
-          url: 'https://bitcoinvn.io/'
+          url: 'https://bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         },
         {
           name: 'News',
-          url: 'https://news.bitcoinvn.io/'
+          url: 'https://news.bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         },
         {
           name: 'Shop',
-          url: 'https://shop.bitcoinvn.io/'
+          url: 'https://shop.bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         },
         {
           name: 'OTC',
-          url: 'https://otc.bitcoinvn.io/'
+          url: 'https://otc.bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         },
         {
           name: 'BTM',
-          url: 'https://btm.bitcoinvn.io/'
+          url: 'https://btm.bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         },
         {
           name: 'Status',
-          url: 'https://status.bitcoinvn.io/'
+          url: 'https://status.bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         },
         {
           name: 'Newsletter',
-          url: 'https://newsletter.bitcoinvn.io/'
+          url: 'https://newsletter.bitcoinvn.io/?utm_source=ln&utm_medium=footer'
         }
       ],
       socials: [{
