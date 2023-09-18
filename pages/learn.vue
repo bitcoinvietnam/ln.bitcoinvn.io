@@ -20,7 +20,7 @@
           </p>
           <p>
             Download: <a class="external-link" target="_blank"
-              href="https://bitcoinvn.io/news/wp-content/uploads/2023/02/Lightning_Network_Report_EN_2022.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">English
+              href="https://bitcoinvn.io/news/wp-content/uploads/2023/02/Lightning_Network_Report_EN_2022_230330.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">English
               version</a>/ <a class="external-link" target="_blank"
               href="https://bitcoinvn.io/news/wp-content/uploads/2023/02/Lightning_Network_Report_VI_2022.pdf?utm_source=ln&utm_medium=download_link&utm_campaign=learn_page">Vietnamese
               version</a>
