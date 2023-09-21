@@ -3,7 +3,7 @@
     <p class="text-sm hover:text-white md:float-left ">
       © 2014 - {{ new Date().getFullYear() }} BitcoinVN
     </p>
-    <p class="md:float-right">
+    <p class="break-words md:float-right ">
       <span v-for=" branch  in branches" class="mx-2 text-sm hover:text-white" :key="branch.name">
         <a :href=branch.url target="_blank">{{ branch.name }}</a>
       </span>
