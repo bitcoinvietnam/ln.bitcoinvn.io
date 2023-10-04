@@ -25,9 +25,7 @@ concurrency:
 
 jobs:
   # Build job
-  build:
-    env: 
-      NODE_ENV: ${{ vars.NODE_ENV }}
+  build:     
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -72,7 +70,9 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with Nuxt
-        run: ${{ steps.detect-package-manager.outputs.manager }} run generate 
+        run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+        env:
+          NODE_ENV: ${{ vars.NODE_ENV }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
