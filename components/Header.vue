@@ -3,7 +3,7 @@
         <div class="flex items-center align-middle flex-rows">
             <div>
                 <NuxtLink to="/">
-                    <img src="~assets/logo.webp" width="150" height="150" alt="BitcoinVN">
+                    <img src="~/assets/logo.webp" width="150" height="150" alt="BitcoinVN">
                 </NuxtLink>
             </div>
             <!--
@@ -12,7 +12,7 @@
                             </div>
                         -->
         </div>
-</div>
+    </div>
 </template>
 
 <script>
