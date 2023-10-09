@@ -61,6 +61,6 @@ export default {
   },
 
   router: {
-    base: process.env.NODE_ENV === 'PROD' ? '/lightning/' : '/'
+    base: '/lightning/'
   }
 }
