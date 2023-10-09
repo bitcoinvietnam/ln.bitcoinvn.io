@@ -16,6 +16,10 @@ body {
 }
 
 @layer components {
+    .ExternalLink {
+        @apply inline w-3 h-3;
+    }
+
     .external-link {
         @apply font-bold text-yellow-500;
     }

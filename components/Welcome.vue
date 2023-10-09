@@ -86,10 +86,6 @@ export default {
 @tailwind components;
 @tailwind utilities;
 
-.ExternalLink {
-  @apply inline w-3 h-3;
-}
-
 .NodeDetailCaption {
   @apply py-2 font-bold text-center text-dark-blue-2;
 }
