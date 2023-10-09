@@ -17,6 +17,15 @@
         </client-only>
       </div>
 
+      <!-- CTA button -->
+      <div class="text-lg font-bold tracking-wide text-center text-white align-middle ">
+        Want to sell Sats to VND? <a
+          href="https://bitcoinvn.io/?deposit=btcln&settle=vnd&utm_source=ln&utm_medium=website&utm_campaign=cta_button"
+          class="underline" target="_blank">
+          Exchange now!
+        </a>
+      </div>
+
       <!-- Information about Lightning Network -->
       <div id="info">
         <LightningInfo />
