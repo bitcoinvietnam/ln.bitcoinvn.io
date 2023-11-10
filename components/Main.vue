@@ -18,11 +18,10 @@
       </div>
 
       <!-- CTA button -->
-      <div class="text-lg font-bold tracking-wide text-center text-white align-middle ">
-        Want to sell Sats to VND? <a
-          href="https://bitcoinvn.io/?deposit=btcln&settle=vnd&utm_source=ln&utm_medium=website&utm_campaign=cta_button"
+      <div id="cta">
+        <a href="https://bitcoinvn.io/?deposit=btcln&settle=vnd&utm_source=ln&utm_medium=website&utm_campaign=cta_button"
           class="underline" target="_blank">
-          Exchange now!
+          <img src="~/assets/cta.jpg" lass="rounded-lg" alt="Exchange Bitcoin to VND on BitcoinVN">
         </a>
       </div>
 
