@@ -49,10 +49,10 @@
 
 <script>
 export default {
-  data () {
-    return {
-      nodeAddress: '026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f'
+    data() {
+        return {
+            nodeAddress: '026af41af0e3861ba170cc0eef8f45a1015125dac57c28df53752dcaeea793b28f'
+        }
     }
-  }
 }
 </script>

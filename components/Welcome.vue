@@ -41,7 +41,7 @@
           <div class="NodeDetailCaption">
             {{ info.caption }}
           </div>
-          <div class="NodeDetailText">
+          <div class="NodeDetailText" :on-click="copy(info.value)">
             {{ info.value }}
           </div>
         </div>
@@ -55,6 +55,17 @@ import ExternalLinkLogo from '~/assets/external-link.svg'
 export default {
   components: {
     ExternalLinkLogo
+  },
+  methods: {
+    copy(text) {
+      // const storage = document.createElement('textarea')
+      // storage.value = text
+      // this.$refs.reference.appendChild(storage)
+      // storage.select()
+      // storage.setSelectionRange(0, 99999)
+      // document.execCommand('copy')
+      // this.$refs.reference.removeChild(storage)
+    }
   },
   props: {
     status: Number,

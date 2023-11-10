@@ -6,7 +6,9 @@
     <!-- Main welcome section -->
     <div
       class="flex flex-col justify-center px-5 py-8 md:px-48 md:py-10 bg-gradient-to-r from-dark-blue via-dark-blue-2 to-dark-blue">
-      <Welcome :status="this.status" :loading="this.mempoolLoading" />
+      <client-only>
+        <Welcome :status="this.status" :loading="this.mempoolLoading" />
+      </client-only>
 
       <!-- Some numbers of Node -->
       <div id="stats">
