@@ -10,14 +10,22 @@
                         Do You Have a Lightning Node of Your Own?<br>
                         Connect With Ours.
                     </div>
-                    <div class="py-2 font-bold md:py-5">
-                        BitcoinVN 22
-                    </div>
-                    <div class="">
-                        <span class="break-all bg-white border-white sm:py-4 md:py-0 md:border-8"
-                            v-clipboard:copy=nodeAddress>
-                            {{ nodeAddress }}
-                        </span>
+                    <div class="flex flex-col py-3 space-y-3">
+                        <div class="font-bold ">
+                            BitcoinVN 22
+                        </div>
+                        <div class="">
+                            <span class="break-all bg-white border-white md:border-8" v-clipboard:copy=nodeAddress>
+                                {{ nodeAddress }}
+                            </span>
+                        </div>
+                        <div class="text-xs md:text-sm">
+                            Since <a href="https://twitter.com/Bitcoin_Vietnam/status/1718311319454306391" target="_blank"
+                                class="underline">Oct/23
+                                whitelist only</a>. Please contact us via <a href="https://twitter.com/Bitcoin_Vietnam/"
+                                target="_blank" class="underline">Twitter</a> or support@bitcoinvn.io
+                            to connect.
+                        </div>
                     </div>
                 </div>
             </div>
